@@ -1,0 +1,84 @@
+/*
+ Theme Name:   Topsy Turvy Cake Design
+ Theme URI:    https://speakinginbytes.com
+ Description:  Twenty Nineteen Child Theme
+ Author:       Patrick Rauland
+ Author URI:   https://speakinginbytes.com
+ Template:     twentynineteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentynineteenchild
+*/
+
+.site-description {
+    color: #b5b5b5;
+    font-style: italic;
+}
+
+/* Remove image filters on recipe pages*/
+.image-filters-enabled .category-recipes .post-thumbnail:before,
+.image-filters-enabled .category-recipes .post-thumbnail:after {
+  display: none;
+}
+.image-filters-enabled .category-recipes .post-thumbnail .post-thumbnail-inner{
+  filter: none;
+}
+
+/* HR Element*/
+.entry .entry-content .wp-block-separator,
+.entry .entry-content hr{
+  background: none;
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
+  max-width: none;
+}
+.entry .entry-content hr:after{
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -1.1em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
+
+/* Blockquote Element*/
+.site-content .entry .entry-content .wp-block-quote{
+  background-color: #eee;
+  border-left-width: 10px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+.site-content .entry .entry-content blockquote:before {
+  color: #bbb;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+.site-content .entry .entry-content blockquote p {
+  display: inline;
+}
+.site-content .entry .entry-content blockquote cite {
+  display: block;
+}
+@media only screen and (min-width: 768px){
+  .entry .entry-content blockquote.alignfull {
+      padding-left: calc(10% + 58px + (2 * 1rem));
+      padding-right: calc(10% + 58px + (2 * 1rem));
+  }
+}
+
+/* Recipes List*/
+.category-recipes ul:first-child,
+.category-recipes p:first-child + ul,
+.category-recipes p:first-child + h3 + ul{
+  font-style: italic;
+}
